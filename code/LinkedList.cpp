@@ -63,6 +63,20 @@ int List::getSize(){
 	return c;
 }
 
+double List::sum(){
+	double sum = 0;
+	if(!empty()){
+		Node * ptr = first_;
+		sum = sum + ptr->entry_;
+		ptr = ptr->next_;
+		while(ptr != NULL){
+			sum = sum + ptr->entry_;
+			ptr = ptr->next_;
+		}
+	}
+	return sum;
+}
+
 
 void List::insertAsFirst(double x)
 {

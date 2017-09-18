@@ -55,7 +55,9 @@ public:
 	//         outfile.
 	void print(ostream & outfile) const;
 
-	int getSize(); // Gets the size of a list.
+	int getSize(); 	// Gets the size of a list.
+
+	double sum(); 	// Returns the sum of the doubles stored
 
 
 	//*** Mutators ***
