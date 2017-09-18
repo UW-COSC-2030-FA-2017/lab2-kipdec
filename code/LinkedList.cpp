@@ -49,6 +49,20 @@ bool List::empty() const
 	return first_ == NULL;
 }
 
+int List::getSize(){
+	//return List.size();
+	int c = 0;
+	if(!empty()){
+		c++;
+		Node * ptr = first_->next_;
+		while(ptr != NULL){
+			c++;
+			ptr = ptr->next_;
+		}
+	}
+	return c;
+}
+
 
 void List::insertAsFirst(double x)
 {

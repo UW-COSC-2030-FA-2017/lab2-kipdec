@@ -13,6 +13,7 @@
 #define _LINKED_LIST_H_
 
 #include <iostream>
+#include <list>
 using std::ostream;
 
 #include "Node.cpp"
@@ -53,6 +54,8 @@ public:
 	// post: the doubles in this List have been written to
 	//         outfile.
 	void print(ostream & outfile) const;
+
+	int getSize(); // Gets the size of a list.
 
 
 	//*** Mutators ***
