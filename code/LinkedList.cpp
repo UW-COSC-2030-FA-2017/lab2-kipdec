@@ -80,7 +80,35 @@ double List::sum(){
 
 void List::insertAsFirst(double x)
 {
-	first_ = new Node(x, first_);
+	first_ = new Node(x, first_);	// If there's nothing in the list, add to
+									// the beginning.
+}
+
+void List::insertAsLast(double x){
+	// After many hours of banging my head on the keyboard, I had to resort to
+	// stackexchange. I read this page:
+	// https://codereview.stackexchange.com/questions/136077/insert-a-node-at-the-tail-of-a-linked-list
+	// and had a solid enough idea of what I needed to do.
+
+	Node * last = new Node(x, first_);	// Creates a node to hold the data for
+										// the last entry.
+	last->entry_ = x;					// Assigns the double passed by the 
+										// function to the last entry.
+	last->next_ = NULL;	// Creates a null value in the pointer past last.
+						// Otherwise, the code will execude forever!
+	if(empty()){
+		insertAsFirst(x);
+	} else {
+		Node * temp = new Node(x, first_);	// Temp node to find the last node
+											// in the list.
+		while(temp->next_ != NULL){		// Cycles through until it finds the 
+										// last node in the list.
+			temp = temp->next_;
+		}
+		temp->next_ = last;				// Assigns the node following the
+										// last node created to the value passed
+										// through the method.
+    }
 }
 
 

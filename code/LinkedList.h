@@ -71,6 +71,8 @@ public:
 	//         from this List and has been returned.
 	double removeFirst();
 
+	void insertAsLast(double x);
+
 private:
 	//*** Inaccessible standard functions ***
 
