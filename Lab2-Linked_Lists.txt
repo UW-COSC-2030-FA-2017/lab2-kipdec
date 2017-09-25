@@ -9,7 +9,9 @@ following files from Lab Resources for today's lab:  Node.h, Node.cpp, LinkedLis
 LinkedList.cpp, ListProcessor.cpp.  
 Study the implementation of the Node and LLList methods.  
 Lab Assignment
+
 1.	Examine, compile, and execute the code.
+
 2.	The LLList class would be easier to use if a method that reports the size of a 
 LLList was available.  Add a size method to the LLList class.
 	Modify the main() routine in ListProcessor to thoroughly test the 
